@@ -1,12 +1,17 @@
 #include<stdio.h>
 int main()
 {
- char name,string[40];
+
+ char name;
+ char string[40];
  // Hurin told me do that, but I still don't know why. 20110912 by JEU
+ // Stupid Wangcong I tell you...
  printf("Hello My Handsome Guy!\n");
  printf("Please tell me your name:");
  scanf("%[^\n]",string);
  scanf("%c",&name);
  printf ("Hi~ My dear %s\n",string);
+ printf("How old are you ?");
  return 0;
+
 }
