@@ -11,6 +11,7 @@ int main()
  scanf("%[^\n]",string);
  scanf("%c",&name);
  printf ("Hi~ My dear %s\n",string);
+ printf("How old are you ?");
  return 0;
 
 }
