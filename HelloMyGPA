@@ -1,0 +1,41 @@
+//  Created by Student on 9/22/15.
+//  Copyright (c) 2015 JEU. All rights reserved.
+//
+
+#include <stdio.h>
+
+int main(){
+    int semester;
+    float cGPA;
+    float goal;
+    float target;
+    
+    printf(" Please tell me this is which semester in your college life（这是你的第几个学期呢～）:\n");
+    scanf("%d",&semester);
+    if (semester > 8 || semester < 0) {
+        printf("Please input the right semester number ;)");
+    }
+    //Get know of smester and check...
+    printf("How much cGPA you have got（你现在的cGPA是多少呢～）:\n");
+    scanf("%f",&cGPA);
+    if ( cGPA > 4.0 || cGPA < 0.0) {
+        printf("Please input the ture cGPA number ;)");
+    }
+    //Get know of cGPA and check...
+    printf("How much cGPA you want to get when you graduate（你想要毕业的时候多少cGPA呢～）:\n");
+    scanf("%f",&goal);
+    if ( goal > 4.0 || goal < 0.0) {
+        printf("Please input the ture goal number ;)");
+    }
+    //Get information of the goal...
+    target = (goal*8 - cGPA*semester)/(8-semester);
+    //Estimate the GPA have to reach...
+    if (target > 4.0) {
+        printf("Life is hard, you have try your best.\nGood luck!\nGPA is not everything in your life");
+    }
+        else{
+        printf("You just need to get the GPA at least %2f in the last semester.\nGood luck!",target);
+    }
+    
+    return 0;
+}
