@@ -1,41 +1,76 @@
 //  Created by Student on 9/22/15.
-//  Copyright (c) 2015 JEU. All rights reserved.
+//  Copyright (c) 2015 JEU. All rights reserved GE PI.
 //
+//  TOTALLY Recode by Covey 9/22/15
 
 #include <stdio.h>
+int main()
+{
+    int semester                     = 0;
+    int error_information       = 0;
+    double cGPA                     = 0;
+    double goal                       = 0;
+    double target                   = 0;
 
-int main(){
-    int semester;
-    float cGPA;
-    float goal;
-    float target;
-    
-    printf(" Please tell me this is which semester in your college life（这是你的第几个学期呢～）:\n");
-    scanf("%d",&semester);
-    if (semester > 8 || semester < 0) {
-        printf("Please input the right semester number ;)");
-    }
     //Get know of smester and check...
-    printf("How much cGPA you have got（你现在的cGPA是多少呢～）:\n");
-    scanf("%f",&cGPA);
-    if ( cGPA > 4.0 || cGPA < 0.0) {
-        printf("Please input the ture cGPA number ;)");
+    do
+    {
+        printf("Please tell me this is which semester in your college life.\n");
+        scanf("%d",&semester);
+        error_information = 0;
+
+        if (semester > 8 || semester < 2)
+            {
+                printf("Please input the right semester number.");
+                error_information = 1;
+            }
     }
+    while(error_information);
+
     //Get know of cGPA and check...
-    printf("How much cGPA you want to get when you graduate（你想要毕业的时候多少cGPA呢～）:\n");
-    scanf("%f",&goal);
-    if ( goal > 4.0 || goal < 0.0) {
-        printf("Please input the ture goal number ;)");
+
+    do
+    {
+        printf("How much cGPA you have got?\n");
+        scanf("%lf",&cGPA);
+        error_information = 0;
+
+        if (cGPA > 4.0 || cGPA < 0.0)
+            {
+                printf("Please input the right semester number.\n)");
+                error_information = 1;
+            }
     }
+    while(error_information);
+
     //Get information of the goal...
-    target = (goal*8 - cGPA*semester)/(8-semester);
-    //Estimate the GPA have to reach...
-    if (target > 4.0) {
-        printf("Life is hard, you have try your best.\nGood luck!\nGPA is not everything in your life");
+
+    do
+    {
+        printf("How much cGPA you want to get when you graduate?\n");
+        scanf("%lf",&goal);
+        error_information = 0;
+        // Calculate whether its target can came turn
+        target = (goal*8 - cGPA*(semester - 1))/(8-(semester - 1));
+        if (goal > 4.0 || goal < 0.0)
+        {
+                printf("Please input the right goal number.\n");
+                error_information = 1;
+        }
+        else if (target <= 0.0 && error_information == 0)
+        {
+            printf("Your goal is too low, please turn up your goal!\n");
+            error_information = 1;
+        }
+        else if (target > 4.0&&error_information == 0)
+        {
+            printf("Your goal is too height, please turn down your goal!\n");
+            error_information = 1;
+        }
+
     }
-        else{
-        printf("You just need to get the GPA at least %2f in the last semester.\nGood luck!",target);
-    }
-    
-    return 0;
+    while(error_information);
+
+    printf("You just need to get the GPA at least %.2f in the last semester.\nGood luck!",target);
+
 }
