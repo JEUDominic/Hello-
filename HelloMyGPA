@@ -6,12 +6,12 @@
 #include <stdio.h>
 int main()
 {
-    int c                                  =0;
+    int c                            = 0;
     int semester                     = 0;
-    int error_information       = 0;
-    double cGPA                     = 0;
-    double goal                       = 0;
-    double target                   = 0;
+    int error_information            = 0;
+    double cGPA                      = 0;
+    double goal                      = 0;
+    double target                    = 0;
 
     //Get know of semester and check...
     do
@@ -36,7 +36,7 @@ int main()
         error_information = 0;
         printf("How much cGPA you have got?\n");
         scanf("%lf",&cGPA);
-        while ( (c = getchar()) != '\n' && c != EOF ) ;
+        while ( (c = getchar()) != '\n' && c != EOF ) ; // Help me! What's the meaning of this sentence!
 
         if (cGPA > 4.0 || cGPA <= 0.0)
             {
