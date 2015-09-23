@@ -6,22 +6,24 @@
 #include <stdio.h>
 int main()
 {
+    int c                                  =0;
     int semester                     = 0;
     int error_information       = 0;
     double cGPA                     = 0;
     double goal                       = 0;
     double target                   = 0;
 
-    //Get know of smester and check...
+    //Get know of semester and check...
     do
     {
+        error_information = 0;
         printf("Please tell me this is which semester in your college life.\n");
         scanf("%d",&semester);
-        error_information = 0;
+        while ( (c = getchar()) != '\n' && c != EOF ) ;
 
         if (semester > 8 || semester < 2)
             {
-                printf("Please input the right semester number.");
+                printf("Please input the right semester number.\n");
                 error_information = 1;
             }
     }
@@ -31,11 +33,12 @@ int main()
 
     do
     {
+        error_information = 0;
         printf("How much cGPA you have got?\n");
         scanf("%lf",&cGPA);
-        error_information = 0;
+        while ( (c = getchar()) != '\n' && c != EOF ) ;
 
-        if (cGPA > 4.0 || cGPA < 0.0)
+        if (cGPA > 4.0 || cGPA <= 0.0)
             {
                 printf("Please input the right semester number.\n)");
                 error_information = 1;
@@ -47,12 +50,14 @@ int main()
 
     do
     {
+        error_information = 0;
         printf("How much cGPA you want to get when you graduate?\n");
         scanf("%lf",&goal);
-        error_information = 0;
+        while ( (c = getchar()) != '\n' && c != EOF ) ;
+
         // Calculate whether its target can came turn
         target = (goal*8 - cGPA*(semester - 1))/(8-(semester - 1));
-        if (goal > 4.0 || goal < 0.0)
+        if (goal > 4.0 || goal <= 0.0)
         {
                 printf("Please input the right goal number.\n");
                 error_information = 1;
@@ -71,6 +76,6 @@ int main()
     }
     while(error_information);
 
-    printf("You just need to get the GPA at least %.2f in the last semester.\nGood luck!",target);
+    printf("You just need to get the GPA at least %.2f in the last semester.\nGood luck!\n",target);
 
 }
