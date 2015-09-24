@@ -47,7 +47,7 @@ int main(){
 	else {
 		year = 2000 + IDstudent[1] - 45 ;
 	}
-	// wrong loop again ...
+	//wrong loop again ...
 	//printf("You will graduate in %d.\n", year );
 	//Check year ...
 	
@@ -124,7 +124,7 @@ int main(){
 		
 	}
 	
-	printf("You are in %s major, you will graduate in %d.\n",major,year)
+	printf("You are in %s major, you will graduate in %d.\n",major,year);
 	return 0;
 	
 }
