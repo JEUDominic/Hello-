@@ -1,6 +1,8 @@
 // JEU 20150924
+// JEU 20150925
 
 #include<stdio.h>
+#include<string.h>
 
 int main(){
 	int year      = 0;
@@ -8,15 +10,39 @@ int main(){
 	int programme = 0;
 	int number    = 0;
 	
+	//char year[5]      = "";
 	char IDstudent[11] = "";
 	char major[5] = "";
+	const char *AE = "AE";
+	const char *FIN = "FIN";
+	const char *CST = "CST";
+	const char *ENVS = "ENVS";
+	const char *STAT = "STAT";
+	const char *ACCT = "ACCT";
+	const char *GIR = "GIR";
+	const char *IJ ="IJ";
+	const char *CTV = "CTV";
+	const char *SWSA = "SWSA";
+	const char *TESL = "TESL";
+	const char *CCM = "CCM";
+	const char *FST = "FST";
+	const char *PRA = "PRA";
+	const char *MHR = "MHR";
+	const char *APSY = "APSY";
+	const char *ATS = "ATS";
+	const char *FM = "FM";
+	const char *CELL = "CELL";
+	const char *MKT = "MKT";
 	
-	//char major[5] = {'C','S','T',};
+	
+	//char major[5] = {'C','S','T'};
 	//printf("Major is %s.\n", major);
 	
 	//scanf("%10s", IDstudent);
 	//printf("StudentID is %10s.\n", IDstudent);
-	
+
+	//char *Major = "CST";
+	//strcpy(major, Major);	
 	do{
 		printf("Please input your student ID in UIC:");
 		scanf("%10s", IDstudent);
@@ -41,13 +67,14 @@ int main(){
 		// Check student ID...
 	while (error == 1) ;
 	
+	//strcpy(major, AE);
 	if ( IDstudent[0] == '1' ){
 		year = 2010 + IDstudent[1] - 45 ;
 	}
 	else {
 		year = 2000 + IDstudent[1] - 45 ;
 	}
-	//wrong loop again ...
+	// wrong loop again ...
 	//printf("You will graduate in %d.\n", year );
 	//Check year ...
 	
@@ -56,31 +83,33 @@ int main(){
 	if (IDstudent[5] == 48){
 		switch (programme) {
 			case 1:
-				major[5] = {'A','E',}; // It does't work but I don't know why.
+				strcpy(major,AE); // It does't work but I don't know why.
 				break;
+				
+		
 			case 2:
-				major[5] = {'F','I','N',};
+				strcpy(major,FIN);
 				break;
 			case 3:
-				major[5] = {'C','S','T',};
+				strcpy(major,CST);
 				break;
 			case 4:
-				major[5] = {'E','N','V','S',};
+				strcpy(major,ENVS);
 				break;
 			case 5:
-				major[5] = {'S','T','A','T',};
+				strcpy(major,STAT);
 				break;
 			case 6:
-				major[5] = {'A','C','C','T',};
+				strcpy(major,ACCT);
 				break;
 			case 7:
-				major[5] = {'G','I','R',};
+				strcpy(major,GIR);
 				break;
 			case 8:
-				major[5] = {'I','J',};
+				strcpy(major,IJ);
 				break;
 			case 9:
-				major[5] = {'C','T','V'};
+				strcpy(major,CTV);
 				break;
 				
 		}
@@ -88,41 +117,42 @@ int main(){
 	else if (IDstudent[5] == 49){
 		switch (programme) {
 			case 0:
-				major[5] = {'S','W','S','A',};
+				strcpy(major,SWSA);
 				break;
 			case 1:
-				major[5] = {'T','E','S','L',};
+				strcpy(major,TESL);
 				break;
 			case 2:
-				major[5] = {'C','C','M',};
+				strcpy(major,CCM);
 				break;
 			case 3:
-				major[5] = {'F','S','T',};
+				strcpy(major,FST);
 				break;
 			case 4:
-				major[5] = {'P','R','A',};
+				strcpy(major,PRA);
 				break;
 			case 5:
-				major[5] = {'M','H','R',};
+				strcpy(major,MHR);
 				break;
 			case 6:
-				major[5] ={'A','P','S','Y',};
+				strcpy(major,APSY);
 				break;
 			case 7:
-				major[5] = {'A','T','S',};
+				strcpy(major,ATS);
 				break;
 			case 8:
-				major[5] = {'F','M',};
+				strcpy(major,FM);
 				break;
 			case 9:
-				major[5] = {'C','E','L','L',};
+				strcpy(major,CELL);
 				break;
 		}
 	}
 	else{
-			major[5] = {'M','K','T',};
+			strcpy(major,MKT);
 		
 	}
+
 	
 	printf("You are in %s major, you will graduate in %d.\n",major,year);
 	return 0;
