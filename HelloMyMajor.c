@@ -11,7 +11,7 @@ int main(){
 	char IDstudent[11] = "";
     int scanferror     = 0;
     char yearchar[2]   = "";
-    int yearNUM        = 0
+    int yearNUM        = 0;
     char majorchar[2]  = "";
     int majorNUM       = 0;
 	char major[21][5]  =
