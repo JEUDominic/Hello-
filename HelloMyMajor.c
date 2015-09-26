@@ -9,6 +9,7 @@ int main(){
 	int year      = 0;
 	int error     = 0;
 	char IDstudent[11] = "";
+    int scanferror = 0;
 	char major[21][5] =
 {"","AE","FIN","CST","ENVS","STAT","ACCT","GIR","IJ","CTV","SWSA","TESL","CCM","FST","PRA","MHR","APSY","ATS","FM","CELL","MKT"};// Thanks to Hurin  :>
     char yearchar[2];
@@ -18,7 +19,8 @@ int main(){
 		
 	do{
 		printf("Please input your student ID in UIC:");
-		scanf("%10s", IDstudent);
+		scanferror = scanf("%10s", IDstudent);
+        while ( (scanferror = getchar()) != '\n' && scanferror != EOF ) ;
 		// Get know of student ID ...
         yearchar[0] = IDstudent[0]; yearchar[1] = IDstudent[1]; //assign the array element by element.
 		yearNUM = atoi(yearchar);// Thanks to Hurin again ;P
@@ -27,7 +29,7 @@ int main(){
 		majorNUM = atoi(majorchar);// And again QAQ
 		// Get know the major...
 
-		if (yearNUM > 16 || yearNUM < 5 || majorNUM == 0 || majorNUM > 21 ){
+		if (yearNUM > 16 || yearNUM < 5 || majorNUM == 0 || majorNUM > 21 || scanferror != 10){
 
 			printf("It seems not a right student ID in UIC.\n");
 			error = 1;
