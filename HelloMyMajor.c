@@ -5,17 +5,18 @@
 #include<stdlib.h>
 
 int main(){
-	int i         = 0;
-	int year      = 0;
-	int error     = 0;
+	int i              = 0;
+	int year           = 0;
+	int error          = 0;
 	char IDstudent[11] = "";
-    int scanferror = 0;
-	char major[21][5] =
+    int scanferror     = 0;
+    char yearchar[2]   = "";
+    int yearNUM        = 0
+    char majorchar[2]  = "";
+    int majorNUM       = 0;
+	char major[21][5]  =
 {"","AE","FIN","CST","ENVS","STAT","ACCT","GIR","IJ","CTV","SWSA","TESL","CCM","FST","PRA","MHR","APSY","ATS","FM","CELL","MKT"};// Thanks to Hurin  :>
-    char yearchar[2];
-    int yearNUM;
-    char majorchar[2];
-    int majorNUM;
+    
 		
 	do{
 		printf("Please input your student ID in UIC:");
