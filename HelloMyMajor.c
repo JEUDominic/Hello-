@@ -32,6 +32,7 @@ int main(){
 			printf("It seems not a right student ID in UIC.\n");
 			error = 1;
 		}
+        else error = 0;
 	}while (error == 1) ;
 	// Check student ID... 
 	
