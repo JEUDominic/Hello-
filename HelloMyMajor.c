@@ -1,4 +1,5 @@
-// Jason 20150926
+// JEU 20150926
+// Improved by Jason @ 20150926
 
 #include<stdio.h>
 #include<stdlib.h>
