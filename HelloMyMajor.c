@@ -20,7 +20,7 @@ int main(){
 	do{
 		printf("Please input your student ID in UIC:");
 		scanferror = scanf("%10s", IDstudent);
-        while ( (scanferror = getchar()) != '\n' && scanferror != EOF ) ;
+        while ( (scanferror = getchar()) != '\n' && scanferror != EOF ) ;//Clean the I/O Buffer.
 		// Get know of student ID ...
         yearchar[0] = IDstudent[0]; yearchar[1] = IDstudent[1]; //assign the array element by element.
 		yearNUM = atoi(yearchar);// Thanks to Hurin again ;P
