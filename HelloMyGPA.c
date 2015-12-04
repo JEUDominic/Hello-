@@ -19,7 +19,7 @@ int main()
         error_information = 0;
         printf("Please tell me this is which semester in your college life.\n");
         scanf("%d",&semester);
-        while ( (c = getchar()) != '\n' && c != EOF ) ;
+        while ( (c = getchar()) != '\n' && c != EOF );
 
         if (semester > 8 || semester < 2)
             {
@@ -36,7 +36,7 @@ int main()
         error_information = 0;
         printf("How much cGPA you have got?\n");
         scanf("%lf",&cGPA);
-        while ( (c = getchar()) != '\n' && c != EOF ) ; // Help me! What's the meaning of this sentence!
+        while ( (c = getchar()) != '\n' && c != EOF ); // Help me! What's the meaning of this sentence!
 
         if (cGPA > 4.0 || cGPA <= 0.0)
             {
@@ -53,7 +53,7 @@ int main()
         error_information = 0;
         printf("How much cGPA you want to get when you graduate?\n");
         scanf("%lf",&goal);
-        while ( (c = getchar()) != '\n' && c != EOF ) ;
+        while ( (c = getchar()) != '\n' && c != EOF );
 
         // Calculate whether its target can came turn
         target = (goal*8 - cGPA*(semester - 1))/(8-(semester - 1));
@@ -64,12 +64,12 @@ int main()
         }
         else if (target <= 0.0 && error_information == 0)
         {
-            printf("Your goal is too low, please turn up your goal!\n");
+            printf("Your goal is too low, please turn up your goal ;) \n");
             error_information = 1;
         }
-        else if (target > 4.0&&error_information == 0)
+        else if (target > 4.0 && error_information == 0)
         {
-            printf("Your goal is too height, please turn down your goal!\n");
+            printf("Your goal is too height, please turn down your goal ;)\n");
             error_information = 1;
         }
 

@@ -44,51 +44,44 @@ date tomorrowDate(date todayDate){
 		caseNumber = 4;
 	switch (caseNumber) {
 		case 1 : if (tomorrowDate.day == 31){
-												tomorrowDate.month++;
-												tomorrowDate.day = 1;
-											}
-											else{
-																								tomorrowDate.day++;
-											}
-											break;
+					tomorrowDate.month++;
+					tomorrowDate.day = 1;
+				}else{
+					tomorrowDate.day++;
+				}
+				break;
 		case 2 : if (tomorrowDate.year%4 == 0){
 					if(tomorrowDate.day == 29){
 						tomorrowDate.month++;
 						tomorrowDate.day = 1;
-					}
-					else {
+					}else {
 						tomorrowDate.day++;
 					}
-			}
-														else{
-															if(tomorrowDate.day == 28){
-								tomorrowDate.month++;
-								tomorrowDate.day = 1;
-								}
-																			else {
-								tomorrowDate.day++;
-							}
-			}
-			break;
+				}else{
+					if(tomorrowDate.day == 28){
+						tomorrowDate.month++;
+						tomorrowDate.day = 1;
+					 }else {
+						tomorrowDate.day++;
+					 }
+				}
+				break;
 		case 3: if(tomorrowDate.day == 30){
-										tomorrowDate.month++;
-										tomorrowDate.day = 1;
-										}
-																					else {
-										tomorrowDate.day++;
-									}
-									break;
-		case 4:  if(tomorrowDate.day == 30){
+					tomorrowDate.month++;
+					tomorrowDate.day = 1;
+					}else {
+					tomorrowDate.day++;
+					}
+					break;
+		case 4: if(tomorrowDate.day == 30){
 					tomorrowDate.year++;
 					tomorrowDate.month = 1;
 					tomorrowDate.day = 1;
-					}
-																	else {
-						tomorrowDate.day++;
+					}else {
+					tomorrowDate.day++;
 					}
 					break;
-		default:
-			break;
+		default: break;
 	}
 	
 	return tomorrowDate;

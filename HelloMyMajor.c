@@ -54,12 +54,9 @@ int main(){
     year = yearNUM + 2003;
     // Calculate year ...
     
-    printf("Your major is ");
-    for (i = 0; i < 5; i++) {
-        printf("%c", major[majorNUM][i]);
-        
-    }
+    printf("Your major is %s.\n",major[majorNUM]);
+    
     // Print the major...
-    printf(".\nYou will graduate in %d.\n",year);
+    printf("You will graduate in %d.\n",year);
     return 0;
 }
