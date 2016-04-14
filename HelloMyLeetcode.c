@@ -1,4 +1,33 @@
 #include <stdio.h>
+
+
+
+
+//  Nim Game...
+bool canWinNim(int n) {
+    if (n%4 == 0) return false;
+    return true;
+}
+
+
+
+
+
+// Single Number...
+int singleNumber(int* nums, int numsSize) {
+    int result = 0;
+    int i = 0;
+    for(i = 0;i < numsSize;i++){
+        result ^= nums[i];
+    }
+    
+    return result;
+}
+
+
+
+
+
 // Add Digits...
 int addDigits(int num) {
     if(num == 0){
@@ -14,15 +43,23 @@ int addDigits(int num) {
 
 
 
-// Single Number...
-int singleNumber(int* nums, int numsSize) {
-    int result = 0;
-    int i = 0;
-    for(i = 0;i < numsSize;i++){
-        result ^= nums[i];
-    }
-    
-    return result;
+
+// Maximum Depth of Binary Tree...
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     struct TreeNode *left;
+ *     struct TreeNode *right;
+ * };
+ */
+
+int maxDepth(struct TreeNode* root) {
+        if(root == NULL) return 0;
+        int a = maxDepth(root->left);
+        int b = maxDepth(root->right);
+        
+        return a > b ? a+1 : b+1;
 }
 
 
@@ -44,7 +81,6 @@ struct TreeNode* invertTree(struct TreeNode* root) {
     root->left = invertTree(root->right);
     root->right = invertTree(temp);
     
-    
     return root;
 }
 
@@ -52,20 +88,41 @@ struct TreeNode* invertTree(struct TreeNode* root) {
 
 
 
-// Maximum Depth of Binary Tree...
+// Move Zeroes...
+void moveZeroes(int* nums, int numsSize) {
+    for(int i = 0; i < numsSize - 1; i++){
+        if(nums[i] == 0) {
+            for(int j=i+1;j<numsSize;j++) {
+                if(nums[j] == 0) continue;
+                nums[i] = nums[j];
+                nums[j] = 0;
+                break;
+            }  
+        }
+    }
+}
+
+
+
+
+
+// Delete Node in a Linked List...
 /**
- * Definition for a binary tree node.
- * struct TreeNode {
+ * Definition for singly-linked list.
+ * struct ListNode {
  *     int val;
- *     struct TreeNode *left;
- *     struct TreeNode *right;
+ *     struct ListNode *next;
  * };
  */
+void deleteNode(struct ListNode* node) {
 
-int maxDepth(struct TreeNode* root) {
-        if(root == NULL) return 0;
-        int a = maxDepth(root->left);
-        int b = maxDepth(root->right);
-        if(a>b) return a+1;
-        return b+1;
+	struct ListNode *del = node->next;
+        node->val = del->val;
+        node->next = del->next;
+
+    
 }
+
+
+
+
