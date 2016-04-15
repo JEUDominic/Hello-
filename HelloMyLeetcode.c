@@ -37,6 +37,7 @@ int addDigits(int num) {
 	if(num == 0){
 		num = 9;
 	}
+
 	return num;
 }
 
@@ -75,7 +76,7 @@ int maxDepth(struct TreeNode* root) {
  *     struct TreeNode *right;
  * };
  */
-struct TreeNode* invertTree(struct TreeNode* root) {
+struct TreeNode* invertTree(struct TreeNode* root{
     if(root == NULL) return root;
     struct TreeNode* temp = root->left;
     root->left = invertTree(root->right);
@@ -115,11 +116,9 @@ void moveZeroes(int* nums, int numsSize) {
  * };
  */
 void deleteNode(struct ListNode* node) {
-
 	struct ListNode *del = node->next;
         node->val = del->val;
         node->next = del->next;
-
     
 }
 
