@@ -119,7 +119,6 @@ void deleteNode(struct ListNode* node) {
 	struct ListNode *del = node->next;
         node->val = del->val;
         node->next = del->next;
-    
 }
 
 
