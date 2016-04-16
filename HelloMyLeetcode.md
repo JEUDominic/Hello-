@@ -18,7 +18,7 @@ HINT: The mutiple of 4
 
 **Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?**
 
-HINT: Using XOR.
+HINT: Using XOR
 
 
 ##Add Digits
@@ -82,4 +82,11 @@ HINT: Recursion
 HINT: Copy value from next node
 
 
+##Same Tree
+	
+	Given two binary trees, write a function to check if they are equal or not. 
+
+	Two binary trees are considered equal if they are structurally identical and the nodes have the same value.
+
+HINT: Recursion
 
