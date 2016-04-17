@@ -137,8 +137,23 @@ void deleteNode(struct ListNode* node) {
 bool isSameTree(struct TreeNode* p, struct TreeNode* q) {
     if(p==NULL&&q==NULL) return true;
     if(p==NULL&&q!=NULL||q==NULL&&p!=NULL||p->val!=q->val) return false;
-    return isSameTree(p->left,q->left)&&isSameTree(p->right,q->right);
-
     
+    return isSameTree(p->left,q->left)&&isSameTree(p->right,q->right);
 }
 
+
+
+
+
+// Valid Anagram...
+public class Solution {
+    public boolean isAnagram(String s, String t) {
+        char[] sArr = s.toCharArray();
+        char[] tArr = t.toCharArray();
+        
+        Arrays.sort(sArr);
+        Arrays.sort(tArr);
+        
+        return String.valueOf(sArr).equals(String.valueOf(tArr));
+    }
+}
