@@ -90,3 +90,37 @@ HINT: Copy value from next node
 
 HINT: Recursion
 
+
+## Valid Anagram
+
+	Given two strings s and t, write a function to determine if t is an anagram of s.
+
+	For example,
+	s = "anagram", t = "nagaram", return true.
+	s = "rat", t = "car", return false.
+	
+**You may assume the string contains only lowercase alphabets.**
+
+HINT: Sort and compare 
+      Count the times of each character and compare
+      
+      
+## Excel Sheet Column Number
+
+	Related to question Excel Sheet Column Title
+
+	Given a column title as appear in an Excel sheet, return its corresponding column number.
+
+	For example:
+
+	    A -> 1
+	    B -> 2
+	    C -> 3
+	    ...
+	    Z -> 26
+	    AA -> 27
+	    AB -> 28 
+	    
+HINT: 26 binary system
+
+
