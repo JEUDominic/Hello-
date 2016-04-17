@@ -172,3 +172,18 @@ public:
         return true;
     }
 }; 
+
+
+
+
+
+// Excel Sheet Column Number...
+int titleToNumber(char* s) {
+    
+    int returnNumber = 0;
+    for(int i = 0;s[i]!='\0';i++){
+        returnNumber = returnNumber*26 + (int)(s[i]-'A'+1)/26*26 + (int)(s[i]-'A'+1)%26;
+    }
+    
+    return returnNumber;
+}
