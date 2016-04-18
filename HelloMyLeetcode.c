@@ -146,6 +146,7 @@ bool isSameTree(struct TreeNode* p, struct TreeNode* q) {
 
 
 // Valid Anagram...
+// JAVA...
 public class Solution {
     public boolean isAnagram(String s, String t) {
         char[] sArr = s.toCharArray();
@@ -157,6 +158,7 @@ public class Solution {
         return String.valueOf(sArr).equals(String.valueOf(tArr));
     }
 }
+// C++...
 class Solution {
 public:
     bool isAnagram(string s, string t) {
@@ -187,3 +189,35 @@ int titleToNumber(char* s) {
     
     return returnNumber;
 }
+
+
+
+
+
+// Contains Duplicate...
+// C++..
+class Solution {
+public:
+    bool containsDuplicate(vector<int>& nums) {
+        unordered_map<int, int> m;
+        for (int i = 0; i < nums.size(); ++i) {
+            if (m.find(nums[i]) != m.end()) return true;
+            ++m[nums[i]];
+        }
+        return false;
+    }
+};
+// C...
+#include <stdlib.h>
+int cmp( const void *a , const void *b)
+{
+        return *(char *)a - *(char *)b;
+}
+bool containsDuplicate(int* nums, int numsSize) {
+    qsort(nums,numsSize,sizeof(nums[0]),cmp);
+    for(int i = 0;i < numsSize-1; i++){
+        if(nums[i] == nums[i+1]) return true;
+    }
+    return false;
+}
+
