@@ -3,7 +3,7 @@
 
 
 
-//  Nim Game...
+// 292 Nim Game...
 bool canWinNim(int n) {
     if (n%4 == 0) return false;
     return true;
@@ -13,7 +13,7 @@ bool canWinNim(int n) {
 
 
 
-// Single Number...
+// 136 Single Number...
 int singleNumber(int* nums, int numsSize) {
     int result = 0;
     int i = 0;
@@ -28,7 +28,7 @@ int singleNumber(int* nums, int numsSize) {
 
 
 
-// Add Digits...
+// 258 Add Digits...
 int addDigits(int num) {
     if(num == 0){
 		return 0;
@@ -45,7 +45,7 @@ int addDigits(int num) {
 
 
 
-// Maximum Depth of Binary Tree...
+// 104 Maximum Depth of Binary Tree...
 /**
  * Definition for a binary tree node.
  * struct TreeNode {
@@ -67,7 +67,7 @@ int maxDepth(struct TreeNode* root) {
 
 
 
-// Invert Binary Tree...
+// 226 Invert Binary Tree...
 /**
  * Definition for a binary tree node.
  * struct TreeNode {
@@ -89,7 +89,7 @@ struct TreeNode* invertTree(struct TreeNode* root{
 
 
 
-// Move Zeroes...
+// 283 Move Zeroes...
 void moveZeroes(int* nums, int numsSize) {
     for(int i = 0; i < numsSize - 1; i++){
         if(nums[i] == 0) {
@@ -107,7 +107,7 @@ void moveZeroes(int* nums, int numsSize) {
 
 
 
-// Delete Node in a Linked List...
+// 237 Delete Node in a Linked List...
 /**
  * Definition for singly-linked list.
  * struct ListNode {
@@ -125,7 +125,7 @@ void deleteNode(struct ListNode* node) {
 
 
 
-// Same Tree...
+// 100 Same Tree...
 /**
  * Definition for a binary tree node.
  * struct TreeNode {
@@ -145,7 +145,7 @@ bool isSameTree(struct TreeNode* p, struct TreeNode* q) {
 
 
 
-// Valid Anagram...
+// 242 Valid Anagram...
 // JAVA...
 public class Solution {
     public boolean isAnagram(String s, String t) {
@@ -179,7 +179,7 @@ public:
 
 
 
-// Excel Sheet Column Number...
+// 171 Excel Sheet Column Number...
 int titleToNumber(char* s) {
     
     int returnNumber = 0;
@@ -194,7 +194,7 @@ int titleToNumber(char* s) {
 
 
 
-// Contains Duplicate...
+// 217 Contains Duplicate...
 // C++..
 class Solution {
 public:
@@ -221,3 +221,25 @@ bool containsDuplicate(int* nums, int numsSize) {
     return false;
 }
 
+
+
+
+
+// 1 Two sum
+// JAVA...
+public class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();  
+        int[] result = new int[2];  
+        for (int i = 0; i < nums.length; i++) {  
+            if (map.get(target - nums[i]) != null) {  
+                result[0] = map.get(target - nums[i]);  
+                result[1] = i;  
+                break;  
+            } else {  
+                map.put(nums[i], i);  
+            }  
+        }  
+        return result;  
+    }  
+}
