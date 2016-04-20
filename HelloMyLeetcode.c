@@ -243,3 +243,85 @@ public class Solution {
         return result;  
     }  
 }
+
+
+
+
+
+// 2 Add Two Numbers...
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     struct ListNode *next;
+ * };
+ */
+
+struct ListNode* addTwoNumbers(struct ListNode* l1, struct ListNode* l2) {
+    struct ListNode* head = (struct ListNode*)malloc(sizeof(struct ListNode));
+    struct ListNode* r = head;
+    struct ListNode* prev;
+    r->val = 0;
+    r->next = NULL;
+    while(l1&&l2){
+         r->val = r->val + l1->val + l2->val;
+         if(r->val >= 10) {
+             r->val -= 10;
+             r->next = (struct ListNode*)malloc(sizeof(struct ListNode));
+             prev = r;
+             r = r->next;
+             r->val = 1;
+             r->next = NULL;
+        }else{
+            r->next = (struct ListNode*)malloc(sizeof(struct ListNode));
+            prev = r;
+            r = r->next;
+            r->val = 0;
+            r->next = NULL;
+        }
+        l1 = l1->next;
+        l2 = l2->next;
+    }
+    
+    while(l1){
+        r->val += l1->val;
+        if(r->val >= 10) {
+             r->val -= 10;
+             r->next = (struct ListNode*)malloc(sizeof(struct ListNode));
+             prev = r;
+             r = r->next;
+             r->val = 1;
+             r->next = NULL;
+        }else{
+            r->next = (struct ListNode*)malloc(sizeof(struct ListNode));
+            prev = r;
+            r = r->next;
+            r->val = 0;
+            r->next = NULL;
+        }
+        l1 = l1->next;
+    }
+    while(l2){
+        r->val += l2->val;
+        if(r->val >= 10) {
+             r->val -= 10;
+             r->next = (struct ListNode*)malloc(sizeof(struct ListNode));
+             prev = r;
+             r = r->next;
+             r->val = 1;
+             r->next = NULL;
+        }else{
+            r->next = (struct ListNode*)malloc(sizeof(struct ListNode));
+            prev = r;
+            r = r->next;
+            r->val = 0;
+            r->next = NULL;
+        }
+        l2 = l2->next;
+    }
+    
+    if(r->val == 0){ prev->next = NULL;}
+    
+    return head;
+    
+}
