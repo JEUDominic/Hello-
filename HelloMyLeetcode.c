@@ -323,5 +323,35 @@ struct ListNode* addTwoNumbers(struct ListNode* l1, struct ListNode* l2) {
     if(r->val == 0){ prev->next = NULL;}
     
     return head;
-    
+}
+
+
+
+
+
+// Majority Elements...
+// C++...
+class Solution {
+public:
+    int majorityElement(vector<int> &num) {
+
+        int elem = 0;
+        int count = 0;
+        
+        for(int i = 0; i < num.size(); i++)  {
+            
+            if(count == 0)  {
+                elem = num[i];
+                count = 1;
+            }
+            else    {
+                if(elem == num[i])
+                    count++;
+                else
+                    count--;
+            }
+            
+        }
+        return elem;
+    }
 }
