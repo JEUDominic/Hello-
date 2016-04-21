@@ -147,10 +147,15 @@ HINT: Hash table,
 HINT: Hash map
 
 
-## 2 Add Two Numbers 
+##2 Add Two Numbers 
 	
 	You are given two linked lists representing two non-negative numbers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
 
 	Input: (2 -> 4 -> 3) + (5 -> 6 -> 4)
 	Output: 7 -> 0 -> 8
 	
+##169 Majority Element
+
+	Given an array of size n, find the majority element. The majority element is the element that appears more than ⌊ n/2 ⌋ times.
+
+	You may assume that the array is non-empty and the majority element always exist in the array.
