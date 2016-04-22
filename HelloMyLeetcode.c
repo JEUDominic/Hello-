@@ -355,3 +355,22 @@ public:
         return elem;
     }
 }
+
+
+
+
+
+// 344 Reverse String...
+char* reverseString(char* s) {
+    int i; 
+    char temp;
+    for(i = 0; s[i] != '\0' ; i++);
+    for(int j = 0; j < i/2; j++){
+        temp = s[j];
+        s[j] = s[i-j-1];
+        s[i-j-1] = temp;
+        if(j == i-1) break;
+    }
+    
+    return s;
+}
