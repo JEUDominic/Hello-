@@ -374,3 +374,27 @@ char* reverseString(char* s) {
     
     return s;
 }
+
+
+
+
+// 206 Reverse Linked Likst
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     struct ListNode *next;
+ * };
+ */
+struct ListNode* reverseList(struct ListNode* head) {
+        if(head==NULL) return NULL;
+        if(head->next==NULL) return head;
+        
+        struct ListNode* p = head->next;
+        struct ListNode* n = reverseList(p);
+        
+        head->next = NULL;
+        p->next = head;
+        
+        return n;
+}
