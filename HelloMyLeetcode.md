@@ -31,7 +31,7 @@ HINT: Using XOR
 
 **Could you do it without any loop/recursion in O(1) runtime?**
 
-HINT: the remainder of 9
+HINT: The remainder of 9
 
 
 ##104 Maximum Depth of Binary Tree
@@ -101,8 +101,8 @@ HINT: Recursion
 	
 **You may assume the string contains only lowercase alphabets.**
 
-HINT: Sort and compare,
-      Count the times of each character and compare
+HINT: 1. Sort and compare,
+      2. Count the times of each character and compare
       
       
 ##171 Excel Sheet Column Number
@@ -128,8 +128,8 @@ HINT: 26 binary system
 	
 	Given an array of integers, find if the array contains any duplicates. Your function should return true if any value appears at least twice in the array, and it should return false if every element is distinct.
 	
-HINT: Hash table,
-      Sort and compare
+HINT: 1. Hash table
+      2. Sort and compare
       
       
 ##1 Two Sum
