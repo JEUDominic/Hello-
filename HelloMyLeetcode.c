@@ -53,7 +53,7 @@ int addDigits(int num) {
  *     struct TreeNode *left;
  *     struct TreeNode *right;
  * };
- */
+**/
 
 int maxDepth(struct TreeNode* root) {
         if(root == NULL) return 0;
@@ -75,7 +75,7 @@ int maxDepth(struct TreeNode* root) {
  *     struct TreeNode *left;
  *     struct TreeNode *right;
  * };
- */
+**/
 struct TreeNode* invertTree(struct TreeNode* root{
     if(root == NULL) return root;
     struct TreeNode* temp = root->left;
@@ -114,7 +114,7 @@ void moveZeroes(int* nums, int numsSize) {
  *     int val;
  *     struct ListNode *next;
  * };
- */
+**/
 void deleteNode(struct ListNode* node) {
 	struct ListNode *del = node->next;
         node->val = del->val;
@@ -255,7 +255,7 @@ public class Solution {
  *     int val;
  *     struct ListNode *next;
  * };
- */
+**/
 
 struct ListNode* addTwoNumbers(struct ListNode* l1, struct ListNode* l2) {
     struct ListNode* head = (struct ListNode*)malloc(sizeof(struct ListNode));
@@ -329,7 +329,7 @@ struct ListNode* addTwoNumbers(struct ListNode* l1, struct ListNode* l2) {
 
 
 
-// Majority Elements...
+// 169 Majority Elements...
 // C++...
 class Solution {
 public:
