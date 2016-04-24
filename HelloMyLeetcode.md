@@ -173,6 +173,7 @@ HINT: Do math
 ##206 Reverse Linked List  
 
 	Reverse a singly linked list.
+HINT: Recursion
 	
 ##13  Roman to Integer 
 	
