@@ -168,7 +168,7 @@ HINT: Do math
 
 	Example:
 	Given s = "hello", return "olleh". 
-
+HINT: Divide and change
 
 ##206 Reverse Linked List  
 
