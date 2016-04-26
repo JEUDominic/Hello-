@@ -231,12 +231,12 @@ public class Solution {
     public int[] twoSum(int[] nums, int target) {
         HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();  
         int[] result = new int[2];  
-        for (int i = 0; i < nums.length; i++) {  
-            if (map.get(target - nums[i]) != null) {  
+        for(int i = 0; i < nums.length; i++){  
+            if(map.get(target - nums[i]) != null){  
                 result[0] = map.get(target - nums[i]);  
                 result[1] = i;  
                 break;  
-            } else {  
+            }else{  
                 map.put(nums[i], i);  
             }  
         }  
@@ -343,8 +343,7 @@ public:
             if(count == 0)  {
                 elem = num[i];
                 count = 1;
-            }
-            else    {
+            }else{
                 if(elem == num[i])
                     count++;
                 else
