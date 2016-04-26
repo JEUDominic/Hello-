@@ -393,7 +393,9 @@ struct ListNode* reverseList(struct ListNode* head) {
         struct ListNode* p = head->next;
         struct ListNode* n = reverseList(p);
         
+		// head is the tail of linklist..
         head->next = NULL;
+		// p is the second last element in the linklist...
         p->next = head;
         
         return n;
