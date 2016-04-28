@@ -459,3 +459,28 @@ struct TreeNode* lowestCommonAncestor(struct TreeNode* root, struct TreeNode* p,
     return root;
 
 }
+
+
+
+
+
+// 83 Remove Duplicates from Sorted List...
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     struct ListNode *next;
+ * };
+**/
+struct ListNode* deleteDuplicates(struct ListNode* head) {
+    struct ListNode* curr = head;
+    while(curr&&curr->next) {
+        if (curr->val == curr->next->val){
+            curr->next = curr->next->next;
+            continue;
+        }
+        curr = curr->next;
+    }
+    
+    return head;
+}
