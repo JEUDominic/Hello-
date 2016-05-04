@@ -10,3 +10,6 @@ FROM (SELECT Email, count(Email)
 		FROM Person as a 
 		GROUP BY Email 
 		HAVING count(Email) >=2 ) as b
+# 175 Combine Two Table
+SELECT a.FirstName, a.LastName, b.City, b.State
+FROM (Person as a left outer join Address as b on a.PersonId = b.PersonId)
