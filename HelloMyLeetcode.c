@@ -622,3 +622,21 @@ int hammingWeight(uint32_t n) {
     }
     return cnt;
 }
+
+
+
+
+
+// 6 Reverse Integer
+int reverse(int x) {
+    if((x < 1534236469 && x > -1563847412)|| x == -2147483412){
+    int res = 0;  
+        while(x)  
+        {  
+            res = res*10 + x%10;  
+            x /= 10;  
+        }  
+        return res;  
+    }
+    else return 0;
+}
