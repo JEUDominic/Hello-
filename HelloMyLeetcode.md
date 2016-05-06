@@ -232,3 +232,10 @@ HINT: 2 situations
 ##191 Number of 1 Bits
 	Write a function that takes an unsigned integer and returns the number of ’1' bits it has (also known as the Hamming weight).	For example, the 32-bit integer ’11' has binary representation 00000000000000000000000000001011, so the function should return 3.
 HINT: & opreation and >> operation.
+## 7 Reverse Integer
+	Reverse digits of an integer.
+
+	Example1: x = 123, return 321
+	Example2: x = -123, return -321
+
+HINT: There is a bug going around in tests I thought.
