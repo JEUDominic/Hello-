@@ -640,3 +640,32 @@ int reverse(int x) {
     }
     else return 0;
 }
+
+
+
+
+
+// 8 String to Integer (atoi)
+int myAtoi(char* str) {
+    if(str == NULL) return 0;
+    while (*str == ' ')
+      str++;
+    int sign = 1;
+    if(*str == '-')
+    {
+      sign = -1;
+      str++;
+    }
+    else if(*str == '+')
+      str++;
+    long long ans = 0;
+    while (*str >= '0' && *str <= '9')
+    {
+      ans = ans*10+*str-'0';
+      if(ans > 2147483647)//out of range
+        return sign < 0 ? -2147483648 : 2147483647;
+      str++;
+    }
+    ans *= sign;
+    return (int)ans;
+}
