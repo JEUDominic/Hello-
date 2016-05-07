@@ -22,3 +22,9 @@ WHERE Id not in(
 SELECT w1.Id 
 FROM Weather w1 INNER JOIN Weather w2 
 ON TO_DAYS(w1.Date) = TO_DAYS(w2.Date) + 1 AND w1.Temperature > w2.Temperature
+#176 Second Highest Salary
+SELECT MAX(Salary) AS SecondHighestSalary
+FROM Employee
+WHERE Salary < (
+    SELECT MAX(Salary) 
+    FROM Employee)
