@@ -1,5 +1,4 @@
 # 181 Employees Earning More Than Their Managers
- 
 SELECT a.Name as Employee
 FROM (Employee as a inner join Employee as b 
 		on a.ManagerID = b.Id) 
@@ -13,3 +12,9 @@ FROM (SELECT Email, count(Email)
 # 175 Combine Two Table
 SELECT a.FirstName, a.LastName, b.City, b.State
 FROM (Person as a left outer join Address as b on a.PersonId = b.PersonId)
+# 183 Customers Who Never Order
+SELECT Name as Customers
+FROM Customers
+WHERE Id not in(
+    SELECT CustomerId
+    FROM Orders)
