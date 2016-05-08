@@ -386,8 +386,8 @@ char* reverseString(char* s) {
  * };
  */
 struct ListNode* reverseList(struct ListNode* head) {
-        if(head==NULL) return NULL;
-        if(head->next==NULL) return head;
+        if(head == NULL) return NULL;
+        if(head->next == NULL) return head;
         
         struct ListNode* p = head->next;
         struct ListNode* n = reverseList(p);
