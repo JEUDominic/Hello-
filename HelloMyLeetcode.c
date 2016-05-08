@@ -209,10 +209,10 @@ public:
 };
 // C...
 #include <stdlib.h>
-int cmp( const void *a , const void *b)
-{
+int cmp( const void *a , const void *b){
         return *(char *)a - *(char *)b;
 }
+
 bool containsDuplicate(int* nums, int numsSize) {
     qsort(nums,numsSize,sizeof(nums[0]),cmp);
     for(int i = 0;i < numsSize-1; i++){
