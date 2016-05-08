@@ -117,8 +117,8 @@ void moveZeroes(int* nums, int numsSize) {
 **/
 void deleteNode(struct ListNode* node) {
 	struct ListNode *del = node->next;
-        node->val = del->val;
-        node->next = del->next;
+    node->val = del->val;
+    node->next = del->next;
 }
 
 
