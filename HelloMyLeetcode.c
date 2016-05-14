@@ -499,7 +499,7 @@ struct ListNode* deleteDuplicates(struct ListNode* head) {
  *     TreeNode right;
  *     TreeNode(int x) { val = x; }
  * }
- */
+**/
 public class Solution {
     public boolean isBalanced(TreeNode root) {
         height(root);
