@@ -500,6 +500,7 @@ struct ListNode* deleteDuplicates(struct ListNode* head) {
  *     TreeNode(int x) { val = x; }
  * }
 **/
+// C++
 public class Solution {
     public boolean isBalanced(TreeNode root) {
         height(root);
