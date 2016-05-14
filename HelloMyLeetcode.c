@@ -448,7 +448,6 @@ public:
  *     struct TreeNode *right;
  * };
 **/
-
 struct TreeNode* lowestCommonAncestor(struct TreeNode* root, struct TreeNode* p, struct TreeNode* q) {
     
   if (!root || !p || !q) return NULL;
