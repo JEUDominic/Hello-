@@ -499,7 +499,7 @@ struct ListNode* deleteDuplicates(struct ListNode* head) {
  *     TreeNode(int x) { val = x; }
  * }
 **/
-// C++
+// JAVA
 public class Solution {
     public boolean isBalanced(TreeNode root) {
         height(root);
@@ -523,5 +523,47 @@ public class Solution {
         return root.val;
     }
 }
-
+// C++
+// This solution is more efficent than the above solution...
+#include <cmath>;
+class Solution {
+public:
+    bool isBalanced(TreeNode* root) {
+        if(!root) return true;
+        if(!root->left && !root->right) return true;
+        if(root->left && !root->right){
+            if(root->left->left || root->left->right )
+                return false;
+        }else if(!root->left && root->right){
+             if(root->right->left || root->right->right )
+                return false;
+        }
+        height(root);
+        return checkBalanced(root);
+    }
+    
+    bool checkBalanced(TreeNode* root){
+        if(!root) return true;
+        if(!root->left && !root->right) return true;
+        if(root->left && !root->right){
+            if(root->left->left || root->left->left )
+                return false;
+        }else if(!root->left && root->right){
+             if(root->right->left || root->right->left )
+                return false;
+        }
+        int l = 0;
+        int r = 0;
+        if(root->left) l = root->left->val;
+        if(root->right) r = root->right->val;
+        if( abs(l-r) <=1 && isBalanced(root->left) && isBalanced(root->right)) return true;
+        return false;
+    }
+    
+    int height(TreeNode* root){
+        if(!root) return 0;
+        root->val = height(root->left) > height(root->right)  ? height(root->left)+1 : height(root->right)+1;
+        return root->val;
+    }
+};
 
