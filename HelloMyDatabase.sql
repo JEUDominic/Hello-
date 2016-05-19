@@ -28,3 +28,7 @@ FROM Employee
 WHERE Salary < (
     SELECT MAX(Salary) 
     FROM Employee)
+#196 Delete Duplicate Emails
+SELECT  p1.Id, Email
+FROM Person p1 INNER JOIN Person p2
+ON p1.Email = p2.Email AND p1.Id < p2.Id
