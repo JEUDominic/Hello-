@@ -567,3 +567,35 @@ public:
     }
 };
 
+
+
+// 19 Remove Nth Node From End of List
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     struct ListNode *next;
+ * };
+ */
+struct ListNode* removeNthFromEnd(struct ListNode* head, int n) {
+    struct ListNode* curr = head;
+    int a = 0;
+    while(curr){
+        curr = curr->next;
+        a++;
+    }
+    curr = head;
+    if(a == n){
+        head = head->next;
+        return head;
+    }
+    for(int i = 1; i < a-n;i++){
+        curr = curr->next;
+    }
+
+    curr->next = curr->next->next;
+    
+    return head;
+}
+
+
