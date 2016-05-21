@@ -604,4 +604,7 @@ struct ListNode* removeNthFromEnd(struct ListNode* head, int n) {
 
 
 
-
+// 231 Power of Two
+bool isPowerOfTwo(int n) {
+    return n>0 && !(n&(n-1));
+}
