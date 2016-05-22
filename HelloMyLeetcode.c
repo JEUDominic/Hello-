@@ -608,3 +608,17 @@ struct ListNode* removeNthFromEnd(struct ListNode* head, int n) {
 bool isPowerOfTwo(int n) {
     return n>0 && !(n&(n-1));
 }
+
+
+
+
+
+// 191 Number of 1 Bits
+int hammingWeight(uint32_t n) {
+    int cnt = 0;
+    while (n > 0) {
+        cnt += (n & 1);
+        n >>= 1;
+    }
+    return cnt;
+}
