@@ -212,14 +212,24 @@ HINT: LCA is in the middle or smaller one.
 HINT: Compare and delete
 
 ## 110 Balanced Binary Tree
+
 	Given a binary tree, determine if it is height-balanced.
 
 	For this problem, a height-balanced binary tree is defined as a binary tree in which the depth of the two subtrees of every node never differ by more than 1.
 	
 ##19 Remove Nth Node From End of List
+
 	Given a linked list, remove the nth node from the end of list and return its head.	For example,
 		Given linked list: 1->2->3->4->5, and n = 2.		After removing the second node from the end, the linked list becomes 1->2->3->5.	Note:	Given n will always be valid.	Try to do this in one pass.
+
 HINT: 2 situations
+
 ##231 Power of Two
-	Given an integer, write a function to determine if it is a power of two.HINT: For the power of two, there are only a 1 in their binary system.
+
+	Given an integer, write a function to determine if it is a power of two.
+	HINT: For the power of two, there are only a 1 in their binary system.
 (1,10,100,1000,...)
+
+##191 Number of 1 Bits
+	Write a function that takes an unsigned integer and returns the number of ’1' bits it has (also known as the Hamming weight).	For example, the 32-bit integer ’11' has binary representation 00000000000000000000000000001011, so the function should return 3.
+HINT: & opreation and >> operation.
